@@ -2,9 +2,15 @@
 
 pragma solidity 0.8.18;
 
-import {test} from "./lib/forge-std/src/Test.sol";
-contract fundmetest {
-    function setup() external {}
+import {Test} from "forge-std/Test.sol";
 
-    function testdemo() external {}
+contract fundmetest is Test {
+    uint256 number = 1;
+    function setUp() external {
+        number = 2;
+    }
+
+    function testdemo() external {
+        assertEq(number,2);
+    }
 }
