@@ -12,5 +12,6 @@ contract fundmetest is Test {
 
     function testdemo() external {
         assertEq(number,2);
+        console.log(number)
     }
 }
